@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Build and packaging
+dist/
+build/
+*.egg-info/
+
+# Data and generated artifacts
+data/
+generated_sg/
+results/
+sg_vis/
+*.pth
+*.ckpt
+
+# Project caches
+HF_cache/
+LMMS_cache/
+vllm_cache/
+
+# External or non-public code/data
+VG-LLM/
+cambrian-s/
+
+
+# LMMS-Eval runtime artifacts
+lmms-eval/
+lmms-eval/logs/
+
+# Private refactor-only tooling
+scripts/private/
+
+# Temporary test outputs
+tmp/
+logs/
+
+# Keep repository metadata and source files tracked by default

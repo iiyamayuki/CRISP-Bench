@@ -1,0 +1,214 @@
+[
+  {
+    "question": "From the camera's viewpoint, is <OBJ_A> in front of <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": ["A: Yes", "B: No"]
+  },
+  {
+    "question": "From the camera's viewpoint, is <OBJ_A> behind <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": ["A: Yes", "B: No"]
+  },
+  {
+    "question": "From the camera's viewpoint, is <OBJ_A> to the left of <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": ["A: Yes", "B: No"]
+  },
+  {
+    "question": "From the camera's viewpoint, is <OBJ_A> to the right of <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": ["A: Yes", "B: No"]
+  },
+  {
+    "question": "From the camera's viewpoint, is <OBJ_A> above <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": ["A: Yes", "B: No"]
+  },
+  {
+    "question": "From the camera's viewpoint, is <OBJ_A> below <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": ["A: Yes", "B: No"]
+  },
+
+  {
+    "question": "From the camera's viewpoint, which best describes the relative position of <OBJ_A> to <OBJ_B>?",
+    "type": "MCQ",
+    "category": "direction",
+    "answer": [
+      "A: <DIR1>",
+      "B: <DIR2>",
+      "C: <DIR3>",
+      "D: <DIR4>"
+    ]
+  },
+
+
+{
+    "question": "Considering real-world physical dimensions, which object is larger in volume: <OBJ_A> or <OBJ_B>?",
+    "type": "MCQ",
+    "category": "size",
+    "answer": ["A: <OBJ_A>", "B: <OBJ_B>"]
+  },
+  {
+    "question": "Which object is taller: <OBJ_A> or <OBJ_B>?",
+    "type": "MCQ",
+    "category": "size",
+    "answer": ["A: <OBJ_A>", "B: <OBJ_B>"]
+  },
+  {
+    "question": "Which object is wider: <OBJ_A> or <OBJ_B>?",
+    "type": "MCQ",
+    "category": "size",
+    "answer": ["A: <OBJ_A>", "B: <OBJ_B>"]
+  },
+
+  {
+    "question": "Rank the following objects by size (largest to smallest): <OBJ_A>, <OBJ_B>, <OBJ_C>.",
+    "type": "MCQ",
+    "category": "ranking",
+    "answer": [
+      "A: <OBJ_A>-<OBJ_B>-<OBJ_C>",
+      "B: <OBJ_A>-<OBJ_C>-<OBJ_B>",
+      "C: <OBJ_B>-<OBJ_A>-<OBJ_C>",
+      "D: <OBJ_C>-<OBJ_B>-<OBJ_A>"
+    ]
+  },
+
+  {
+    "question": "Rank the following objects by height (tallest to shortest): <OBJ_A>, <OBJ_B>, <OBJ_C>.",
+    "type": "MCQ",
+    "category": "ranking",
+    "answer": [
+      "A: <OBJ_A>-<OBJ_B>-<OBJ_C>",
+      "B: <OBJ_A>-<OBJ_C>-<OBJ_B>",
+      "C: <OBJ_B>-<OBJ_A>-<OBJ_C>",
+      "D: <OBJ_C>-<OBJ_B>-<OBJ_A>"
+    ]
+  },
+
+
+  {
+    "question": "Which object is physically closer to the camera: <OBJ_A> or <OBJ_B>?",
+    "type": "MCQ",
+    "category": "distance",
+    "answer": ["A: <OBJ_A>", "B: <OBJ_B>"]
+  },
+  {
+    "question": "Which object is physically farther from the camera: <OBJ_A> or <OBJ_B>?",
+    "type": "MCQ",
+    "category": "distance",
+    "answer": ["A: <OBJ_A>", "B: <OBJ_B>"]
+  },
+  {
+    "question": "Which object is physically closer to <OBJ_A>: <OBJ_B> or <OBJ_C>?",
+    "type": "MCQ",
+    "category": "distance",
+    "answer": ["A: <OBJ_B>", "B: <OBJ_C>"]
+  },
+  {
+    "question": "Which object is physically farther from <OBJ_A>: <OBJ_B> or <OBJ_C>?",
+    "type": "MCQ",
+    "category": "distance",
+    "answer": ["A: <OBJ_B>", "B: <OBJ_C>"]
+  },
+  {
+    "question": "Rank the following objects by distance from the camera (nearest to farthest): <OBJ_A>, <OBJ_B>, <OBJ_C>.",
+    "type": "MCQ",
+    "category": "ranking",
+    "answer": [
+      "A: <OBJ_A>-<OBJ_B>-<OBJ_C>",
+      "B: <OBJ_A>-<OBJ_C>-<OBJ_B>",
+      "C: <OBJ_B>-<OBJ_A>-<OBJ_C>",
+      "D: <OBJ_C>-<OBJ_B>-<OBJ_A>"
+    ]
+  },
+  {
+    "question": "From the camera's viewpoint and only considering the marked objects, how many objects are <REL_PHRASE> <OBJ_A>?",
+    "type": "MCQ",
+    "category": "counting",
+    "answer": [
+      "A: <NUM1>",
+      "B: <NUM2>",
+      "C: <NUM3>",
+      "D: <NUM4>"
+    ]
+  },
+  {
+    "question": "Considering the marked objects, how many objects are within <DIST> meters of <OBJ_A>?",
+    "type": "MCQ",
+    "category": "counting",
+    "answer": [
+      "A: <NUM1>",
+      "B: <NUM2>",
+      "C: <NUM3>",
+      "D: <NUM4>"
+    ]
+  },
+    {
+    "question": "Considering the marked objects, how many objects are farther than <DIST> meters from <OBJ_A>?",
+    "type": "MCQ",
+    "category": "counting",
+    "answer": [
+      "A: <NUM1>",
+      "B: <NUM2>",
+      "C: <NUM3>",
+      "D: <NUM4>"
+    ]
+  },
+  {
+    "question": "Imagine you are standing at the location of <OBJ_A> and facing directly towards <OBJ_B>. From this perspective, in which direction is <OBJ_C> located relative to you?",
+    "type": "MCQ",
+    "category": "transformation",
+    "answer": [
+      "A: <DIR1>",
+      "B: <DIR2>",
+      "C: <DIR3>",
+      "D: <DIR4>"
+    ]
+  },
+
+  {
+    "question": "Approximately how long (in meters) is <OBJ_A>?",
+    "type": "NAQ",
+    "category": "size",
+    "answer": "<NAQ>"
+  },
+  {
+    "question": "What is the approximate height (in meters) of <OBJ_A>?",
+    "type": "NAQ",
+    "category": "size",
+    "answer": "<NAQ>"
+  },
+  {
+    "question": "Estimate the width (in meters) of <OBJ_A>.",
+    "type": "NAQ",
+    "category": "size",
+    "answer": "<NAQ>"
+  },
+
+
+  {
+    "question": "Approximately how far (in meters) is <OBJ_A> from the camera?",
+    "type": "NAQ",
+    "category": "distance",
+    "answer": "<NAQ>"
+  },
+  {
+    "question": "What is the distance (in meters) between <OBJ_A> and <OBJ_B>?",
+    "type": "NAQ",
+    "category": "distance",
+    "answer": "<NAQ>"
+  },
+  {
+    "question": "Suppose we place a new object A in the <DIR> direction from <OBJ_A> at a distance of approximately <DIST> meters. What is the horizontal distance (in meters) between A and <OBJ_B>?",
+    "type": "NAQ",
+    "category": "deduction",
+    "answer": "<NAQ>"
+  }
+]

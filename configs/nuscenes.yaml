@@ -1,0 +1,43 @@
+# Edit this file first. Stage scripts load these keys directly.
+
+# Step 01: NuScenes-specific preprocessing.
+NUSCENES_DATAROOT: ./data/raw/nuscenes
+NUSCENES_VERSION: v1.0-mini
+NUSCENES_SCENE_GRAPH_DIR: ./data/processed/nuscenes/scene_graph
+NUSCENES_NODE_JSON: ./data/processed/nuscenes/scene_graph/node_annotations.json
+NUSCENES_FILTERED_NODES_JSON: ./data/processed/nuscenes/scene_graph/filtered_nodes.json
+NUSCENES_WORLD_INPUT_JSON: ./data/processed/nuscenes/scene_graph/filtered_nodes.json
+NUSCENES_WORLD_OUTPUT_JSON: ./data/processed/nuscenes/scene_graph/filtered_nodes_cam.json
+MIN_BOX_H_PX: 40
+MIN_INSIDE_RATIO: 0.2
+MIN_BOX_PIXELS: 40
+MIN_VISIBILITY: 0
+NUSCENES_VERIFY_INSTANCE: 1
+NUSCENES_SYNC_ATTRS: 0
+NUSCENES_TOLERANCE: 0.5
+
+# Step 03: shared scene-graph construction.
+EDGE_EPS: 0.2
+EDGE_CENTROID_TOL: 0.5
+EDGE_MAX_DISTANCE: 2.5
+EDGE_FILTER_THRESHOLD: 0.9
+EDGE_FILTER_USE_CLIP: 1
+NUSCENES_SHARED_INPUT_JSON: ./data/processed/nuscenes/scene_graph/filtered_nodes_cam.json
+NUSCENES_NODES_FILTERED_JSON: ./data/processed/nuscenes/scene_graph/nodes_filtered.json
+NUSCENES_ANNOTATED_DIR: ./data/processed/nuscenes/annotated_image
+NUSCENES_ANNOTATED_JSON: ./data/processed/nuscenes/annotated_image/nodes_with_2dbox.json
+NUSCENES_SCENE_JSON: ./data/processed/nuscenes/scene_graph/scene_graph.json
+NUSCENES_FILTERED_SCENE_GRAPH_JSON: ./data/processed/nuscenes/scene_graph/filtered_scene_graph.json
+NUSCENES_DIVERSITY_THRESHOLD: 0.8
+NUSCENES_IMAGE_CAP: 600
+
+# Steps 04-05: QA generation and SGC export.
+NUSCENES_ROOT: ./data/processed/nuscenes
+COMBINED_ROOT: ./data/processed/combined
+QA_TEMPLATES: ./qa/question_template.json
+NUSCENES_FILTERED_SG: ./data/processed/nuscenes/scene_graph/filtered_scene_graph.json
+NUSCENES_QA_DIR: ./data/processed/nuscenes/QA_pairs
+NUSCENES_QA_JSONL: ./data/processed/nuscenes/QA_pairs/qa_data.jsonl
+NUSCENES_QA_BALANCED_JSONL: ./data/processed/nuscenes/QA_pairs/qa_data_balanced.jsonl
+NUSCENES_SGC_DIR: ./data/processed/nuscenes/SGC_task
+NUSCENES_SGC_JSON: ./data/processed/nuscenes/SGC_task/sgc_task.json

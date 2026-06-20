@@ -1,0 +1,34 @@
+# Edit this file first. Stage scripts load these keys directly.
+
+# Step 02: ScanNet++ official preprocessing.
+SCANNETPP_DATAROOT: ./data/raw/scannetpp
+SCANNETPP_SCENE_DIR: ./data/raw/scannetpp/scene
+SCANNETPP_SCENE_GRAPH_DIR: ./data/processed/scannetpp/scene_graph
+SCANNETPP_SG_JSONL_DIR: ./data/processed/scannetpp/scene_graph/sg_jsonl
+SCANNETPP_SCENE_JSON: ./data/processed/scannetpp/scene_graph/scene_graph.json
+SCANNETPP_BATCH_SIZE: 4
+
+# Step 03: shared scene-graph construction.
+EDGE_EPS: 0.2
+EDGE_CENTROID_TOL: 0.5
+EDGE_MAX_DISTANCE: 2.5
+EDGE_FILTER_THRESHOLD: 0.9
+EDGE_FILTER_USE_CLIP: 1
+SCANNETPP_SHARED_INPUT_JSON: ./data/processed/scannetpp/scene_graph/scene_graph.json
+SCANNETPP_NODES_FILTERED_JSON: ./data/processed/scannetpp/scene_graph/nodes_filtered.json
+SCANNETPP_ANNOTATED_DIR: ./data/processed/scannetpp/annotated_image
+SCANNETPP_ANNOTATED_JSON: ./data/processed/scannetpp/annotated_image/nodes_with_2dbox.json
+SCANNETPP_FILTERED_SCENE_GRAPH_JSON: ./data/processed/scannetpp/scene_graph/filtered_scene_graph.json
+SCANNETPP_DIVERSITY_THRESHOLD: 0.8
+SCANNETPP_IMAGE_CAP: 600
+
+# Steps 04-05: QA generation and SGC export.
+SCANNETPP_ROOT: ./data/processed/scannetpp
+COMBINED_ROOT: ./data/processed/combined
+QA_TEMPLATES: ./qa/question_template.json
+SCANNETPP_FILTERED_SG: ./data/processed/scannetpp/scene_graph/filtered_scene_graph.json
+SCANNETPP_QA_DIR: ./data/processed/scannetpp/QA_pairs
+SCANNETPP_QA_JSONL: ./data/processed/scannetpp/QA_pairs/qa_data.jsonl
+SCANNETPP_QA_BALANCED_JSONL: ./data/processed/scannetpp/QA_pairs/qa_data_balanced.jsonl
+SCANNETPP_SGC_DIR: ./data/processed/scannetpp/SGC_task
+SCANNETPP_SGC_JSON: ./data/processed/scannetpp/SGC_task/sgc_task.json

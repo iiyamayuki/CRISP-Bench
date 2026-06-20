@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use CRISP Bench, please cite the paper below."
+title: "CRISP Bench"
+type: software
+authors:
+  - family-names: Li
+    given-names: Zhixing
+  - family-names: Yu
+    given-names: Yinan
+license: MIT
+preferred-citation:
+  type: article
+  title: "From Hallucination to Grounding: Diagnosing Visual Spatial Intelligence via CRISP"
+  authors:
+    - family-names: Li
+      given-names: Zhixing
+    - family-names: Yu
+      given-names: Yinan

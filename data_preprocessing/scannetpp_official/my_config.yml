@@ -1,0 +1,123 @@
+# my_config.yml
+
+# 1. Fill in your token
+token: 
+
+# 2. Set download location
+data_root:
+
+download_scenes:
+  - "0271889ec0"
+  - "684d4da1fe"
+  - "c340418532"
+  - "35f2120068"
+  - "dc263dfbf0"
+  - "734bd1a97e"
+  - "b119249da7"
+  - "0e900bcc5c"
+  - "ff17657f71"
+  - "8ea517a2fc"
+  - "5ea3e738c3"
+  - "927aacd5d1"
+  - "bf50f418ba"
+  - "77b40ce601"
+  - "867d97cf3d"
+  - "116456116b"
+  - "068ba2946c"
+  - "a30b666f83"
+  - "49fe768553"
+  - "bc2fce1d81"
+  - "90d8e25cee"
+  - "a4d48ea6b3"
+  - "cc0aa81452"
+  - "390eda9157"
+  - "3cb9f85891"
+  - "7c31bccde5"
+  - "37562e7f48"
+  - "96b7c379eb"
+  - "7d75c00a32"
+  - "e1fb8626c8"
+  - "70f0e494b2"
+  - "dc5f00843f"
+  - "0f0191b10b"
+  - "8de35c04a3"
+  - "56669a70bc"
+  - "88f265fe25"
+  - "196876abd7"
+  - "3ee9d33aef"
+  - "3d0b7d4b4e"
+  - "120acffd90"
+  - "af112b8903"
+  - "0e28968c1f"
+  - "a08d9a2476"
+  - "f6659a3107"
+  - "511061232"
+  - "251443268c"
+  - "47c1209b9e"
+  - "87957b7c0b"
+  - "324d07a5b3"
+  - "fe3fc057a1"
+  - "39580e2a43"
+  - "fd8560cfd6"
+  - "1ae9e5d2a6"
+  - "1b379f1114"
+  - "d7abfc4b17"
+  - "0caa1ae59a"
+  - "e0de253456"
+  - "53bd1b3b05"
+  - "924b364b9f"
+  - "17268bec90"
+
+download_assets: [
+    dslr_resized_undistorted_dir,
+    
+    dslr_colmap_dir,
+    dslr_nerfstudio_transform_path,
+    dslr_nerfstudio_transform_undistorted_path,
+    
+    scan_mesh_segs_path,   
+    scan_anno_json_path,   
+    scan_mesh_path,    
+    
+]
+
+splits: [nvs_sem_train, nvs_sem_val, nvs_test, sem_test, nvs_test_iphone]
+
+meta_files:
+  - splits/nvs_sem_train.txt
+  - splits/nvs_sem_val.txt
+  - splits/nvs_test.txt
+  - splits/nvs_test_small.txt
+  - splits/sem_test.txt
+  - splits/nvs_test_iphone.txt
+  - metadata/scene_types.json
+  - metadata/semantic_classes.txt
+  - metadata/instance_classes.txt
+
+root_url: https://scannetpp.mlsg.cit.tum.de/scannetpp/download/v2?version=v1&token=TOKEN&file=FILEPATH
+metadata_only: false
+dry_run: false
+verbose: true
+
+zipped_assets: [
+  dslr_resized_undistorted_dir, 
+  dslr_resized_undistorted_mask_dir, 
+  dslr_colmap_dir,
+  dslr_nerfstudio_transform_path,
+  dslr_nerfstudio_transform_undistorted_path,
+  scan_mesh_path,
+  scan_mesh_segs_path, 
+  scan_anno_json_path
+]
+
+scene_assets:
+  - dslr_resized_undistorted_dir
+  - dslr_resized_undistorted_mask_dir
+  - dslr_colmap_dir
+  - dslr_nerfstudio_transform_path
+  - dslr_nerfstudio_transform_undistorted_path
+  - scan_mesh_segs_path
+  - scan_anno_json_path
+  - scan_mesh_path
+
+exclude_assets: {}

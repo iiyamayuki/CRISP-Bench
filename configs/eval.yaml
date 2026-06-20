@@ -1,0 +1,58 @@
+# User-facing evaluation config.
+# Stage 06 and stage 07 read these keys directly.
+
+LMMS_EVAL_ROOT: ./lmms-eval
+TASKS_DIR: ./tasks
+LOGS_DIR: ./lmms-eval/logs
+LMMS_LOGS_DIR: ./lmms-eval/logs
+RESULTS_DIR: ./results
+QA_SG_RESULTS_DIR: ./results/qa_sg
+CONSISTENCY_RESULTS_DIR: ./results/consistency_score
+GENERATED_SG_DIR: ./generated_sg
+QA_TEMPLATES: ./qa/question_template.json
+CONSISTENCY_QA_LIST: ./data/processed/combined/QA_pairs/qa_data.jsonl
+
+# Shared local-GPU runtime settings for stage 06 wrappers.
+# NUM_GPUS feeds vLLM tensor parallel by default and accelerate --num_processes
+# by default. API-only wrappers ignore this setting.
+NUM_GPUS: 2
+# Optional GPU affinity for local wrappers.
+# CUDA_VISIBLE_DEVICES: 0,1
+# Optional per-engine overrides.
+# TENSOR_PARALLEL_SIZE: 2
+# ACCELERATE_NUM_PROCESSES: 2
+# ACCELERATE_MAIN_PROCESS_PORT: 12399
+
+# Optional QA-SG task inputs.
+# First convert the shipped master scene-graph source JSONL:
+# python evaluation/convert_GT_scene_graph.py \
+#   --input ./data/processed/combined/scene_graph/combined_scene_graph.jsonl \
+#   --output ./generated_sg/gt_sg.json
+# Then uncomment and edit these two lines before running crisp_qa_sg.
+# CRISP_QA_SG_GT_SG_PATH: ./generated_sg/gt_sg.json
+# CRISP_QA_SG_PRED_SG_PATH: ./generated_sg/pred_sg.json
+
+evaluation:
+  model_matrix:
+    - script: vllm_qwen3vl.sh
+      env:
+        MODEL: Qwen/Qwen3-VL-8B-Instruct
+        TASKS: crisp_qa,crisp_sgc
+        OUTPUT_PATH: ./lmms-eval/logs/qwen3vl_vllm
+
+    - script: internvl3_5.sh
+      env:
+        TASKS: crisp_qa,crisp_sgc
+        OUTPUT_PATH: ./lmms-eval/logs/internvl3_5
+
+    - script: gemini.sh
+      env:
+        MODEL_VERSION: gemini-2.5-flash
+        TASKS: crisp_qa,crisp_sgc
+        OUTPUT_PATH: ./lmms-eval/logs/gemini_eval_result
+
+    - script: gpt5.sh
+      env:
+        MODEL_VERSION: gpt-5-mini
+        TASKS: crisp_qa,crisp_sgc
+        OUTPUT_PATH: ./lmms-eval/logs/GPT5

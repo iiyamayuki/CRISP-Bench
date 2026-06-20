@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CRISP_bench"
+version = "0.1.0"
+description = "CRISP Bench data preprocessing, scene graph construction, QA generation, and evaluation toolkit."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Zhixing Li" },
+    { name = "Yinan Yu" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "clip @ git+https://github.com/openai/CLIP.git",
+    "json-repair>=0.54.2",
+    "matplotlib>=3.10.0",
+    "networkx>=3.5",
+    "numpy>=1.26.0",
+    "nuscenes-devkit>=1.2.0",
+    "opencv-python-headless>=4.11.0",
+    "pandas>=2.3.3",
+    "pillow>=12.0.0",
+    "pyquaternion>=0.9.9",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.7.0",
+    "scipy>=1.16.0",
+    "seaborn>=0.13.2",
+    "tabulate>=0.9.0",
+    "torch>=2.2.0",
+    "tqdm>=4.67.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.11.0",
+]
+
+[tool.setuptools.packages.find]
+include = [
+    "evaluation",
+    "collect_results",
+    "data_preprocessing",
+    "qa",
+    "scene_graph",
+    "utils",
+    "visualization",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+exclude = [
+    "lmms-eval",
+    "scripts/private",
+    "data_preprocessing/scannetpp_official",
+]
+
+[tool.ruff.lint]
+select = [
+    "F",     # pyflakes
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "I",     # isort
+    "UP",    # pyupgrade
+]
+ignore = [
+    "E402",  # module-import-not-at-top (project uses sys.path before imports)
+    "E501",  # line too long (handled by formatter if needed)
+    "E701",  # multiple-statements-on-one-line-colon (compact style in viz code)
+    "E702",  # multiple-statements-on-one-line-semicolon (same as E701)
+    "E741",  # ambiguous-variable-name (used in math/graph code, e.g. l, I)
+    "W291",  # trailing-whitespace (cosmetic, defer to formatter)
+    "W293",  # blank-line-with-whitespace (cosmetic, defer to formatter)
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "data_preprocessing",
+    "scene_graph",
+    "qa",
+    "evaluation",
+    "collect_results",
+    "visualization",
+    "utils",
+]
