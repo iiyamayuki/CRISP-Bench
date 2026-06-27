@@ -177,13 +177,19 @@ Then set `CRISP_QA_SG_GT_SG_PATH=./generated_sg/gt_sg.json`, and point `CRISP_QA
 ## Citation
 
 Citation metadata is tracked in `CITATION.cff`.
-Until the paper link is public, please use:
+Paper link: https://arxiv.org/abs/2606.26535
+
+Please cite:
 
 ```bibtex
-@misc{li_yu_crisp,
+@misc{li2026hallucinationgroundingdiagnosingvisual,
   title = {From Hallucination to Grounding: Diagnosing Visual Spatial Intelligence via CRISP},
   author = {Zhixing Li and Yinan Yu},
-  note = {Public paper link to be added}
+  year = {2026},
+  eprint = {2606.26535},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2606.26535}
 }
 ```
 

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use CRISP Bench, please cite the paper below."
+message: "If you use CRISP Bench, please cite the arXiv paper below."
 title: "CRISP Bench"
 type: software
 authors:
@@ -11,6 +11,12 @@ license: MIT
 preferred-citation:
   type: article
   title: "From Hallucination to Grounding: Diagnosing Visual Spatial Intelligence via CRISP"
+  year: 2026
+  url: "https://arxiv.org/abs/2606.26535"
+  identifiers:
+    - type: other
+      description: arXiv
+      value: "2606.26535"
   authors:
     - family-names: Li
       given-names: Zhixing
