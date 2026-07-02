@@ -1,6 +1,17 @@
 # From Hallucination to Grounding: Diagnosing Visual Spatial Intelligence via CRISP [ECCV 2026]
 
-This repository contains the code and data for the CRISP benchmark, which is designed to evaluate the visual spatial intelligence of vision language models (VLMs) in a comprehensive manner. 
+<p align="center">
+  <img src="docs/assets/fig1_teaser.png" alt="CRISP Concept" width="80%">
+</p>
+
+**Are VLMs genuinely reasoning in 3D, or just exploiting semantic shortcuts?** 
+
+Current QA benchmarks often create an "illusion of spatial intelligence" by allowing models to guess answers using language priors. **CRISP** is a novel structural-diagnostic paradigm that moves beyond flawed black-box VQA. By coupling Spatial QA with metric 3D Scene Graph Construction (SGC), CRISP forces models to explicitly externalize their implicit structural perception.
+
+With this repository, you can:
+- 🔍 **Diagnose Semantic Shortcuts:** Test whether your VLM's correct QA answers are genuinely grounded in 3D geometry or just hallucinatory guesses.
+- 📐 **Evaluate Structural Consistency:** Measure the "Perception-Reasoning Disconnect" using our cross-task consistency protocol.
+- 🚀 **Run Oracle Interventions:** Inject ground-truth 3D Scene Graphs to bypass perception bottlenecks and evaluate the pure reasoning potential of your models.
 
 ## Installation
 
