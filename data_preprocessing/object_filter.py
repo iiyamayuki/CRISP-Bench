@@ -175,6 +175,7 @@ def allocate_evenly_no_diversity(desired_total: int,
 def main():
     """CLI entry point for filtering and sampling scene images by object count."""
     parser = argparse.ArgumentParser()
+    parser.add_argument('--input', required=True, help='Path to the input merged JSON')
     parser.add_argument('--output', required=True, help='Path to save the filtered JSON')
     parser.add_argument('--seed', type=int, default=42, help='Random seed for reproducibility')
     parser.add_argument('--diversity-threshold', type=float, default=0.3,
